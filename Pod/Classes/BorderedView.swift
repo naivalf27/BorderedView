@@ -29,10 +29,10 @@ import UIKit
     
     @IBInspectable public var borderColor: UIColor {
         get {
-            return UIColor(CGColor: layer.borderColor)!
+            return UIColor(cgColor: layer.borderColor ?? UIColor.black.cgColor)
         }
         set {
-            layer.borderColor = newValue.CGColor
+            layer.borderColor = newValue.cgColor
         }
     }
 }
